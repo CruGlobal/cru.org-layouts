@@ -1,0 +1,7 @@
+[submodule "brand"]
+	path = brand
+	url = https://github.com/thejamesdempsey/cru-brand.git
+	
+[submodule "inuit.css"]
+	path = prototype-alpha/dev/styles/inuit.css
+	url = https://github.com/thejamesdempsey/inuit.css.git

@@ -1,2 +1,3 @@
-cru.org-layouts
+
+Cru.org Layouts
 ===============
