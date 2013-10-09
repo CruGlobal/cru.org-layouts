@@ -1,0 +1,501 @@
+.mt2{
+	margin-top: 12px !important;
+}
+
+.mb2{
+	margin-bottom: 12px !important;
+}
+
+.mb5{
+	margin-bottom: 30px !important;
+}
+
+.mt5{
+	margin-top: 30px !important;
+}
+
+.pt2{
+	padding-top: 12px !important;
+	
+}
+
+.pt4{
+	padding-top: 24px !important;
+}
+
+.pt5{
+	padding-top: 30px !important;
+}
+
+.pb2{
+	padding-bottom: 12px !important;
+	
+}
+
+.pb4{
+	padding-bottom: 24px !important;
+}
+
+.pb5{
+	padding-bottom: 30px !important;
+}
+
+.bg--gold{
+	background-color: $cru-gold;
+}
+
+.bg--gray{
+	background-color: $cru-gray;
+	
+}
+
+.block-center{
+	margin: 0 auto;
+}
+
+.text-center{
+	text-align: center;
+}
+
+.text-white{
+	color: #ffffff !important;
+}
+
+h1, h2, h3, h4{
+	margin-bottom: 0;
+}
+
+
+html{
+	width: 100%;
+	height: 100%;
+	border-top: 6px solid $cru-gray;
+	
+}
+
+body {
+    padding-top: 63px;
+    background-color: $gray-lighter;
+	width: 100%;
+	height: 100%;
+	
+}
+
+body:before {
+	content: " ";
+	display: block;
+	width: 100%;
+	height: 61px;
+	top: 0;
+	left: 0;
+	position: absolute;
+}
+
+.wrapper{
+	max-width: 1100px;
+	margin-right: auto;
+	margin-left: auto;
+	padding-right: 24px;
+	padding-left: 24px;
+}
+
+#navigation{
+	display: inline-block;
+	width: 85%;
+	height: 64px;
+	vertical-align: middle;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	
+}
+
+#logo{
+	display: inline-block;
+	margin-bottom: 0;
+	width: 15%;
+	text-align: center;
+	height: 64px;
+	line-height: 64px;
+	vertical-align: middle;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	
+	a{
+		display: inline-block;
+		overflow: hidden;
+		vertical-align: middle;
+		height: 55px;
+		border-bottom: none;
+		
+	}
+}
+
+.site-nav{
+	width: 90%;
+	display: none;
+	vertical-align: middle;
+}
+
+.right-nav{
+	float: right;
+	text-align: right;
+	width: 100%;
+	display: inline-block;
+	vertical-align: middle;
+}
+	.user-actions{
+		display: none;
+		font-size: 60%;
+	}
+	
+
+.site-header{
+	width: 100%;
+	height: 100%;
+	max-height: 65px;
+	position: fixed;
+	top: 0;
+	overflow: hidden;
+	z-index: 505;
+}
+
+.navigation-wrapper{
+	z-index: 500;
+	position: absolute;
+	width: 100%;
+	height: 64px;
+	max-height: 100%;
+	top: -1px;
+	overflow: hidden;
+	background: white;
+	-webkit-box-shadow: 0 1px 1px rgba(6,8,8,0.1);
+	box-shadow: 0 1px 1px rgba(6,8,8,0.1);
+	border-top: 2px solid $cru-gold;
+	
+	li{
+		display: inline-block;
+	}
+	a{
+		display: inline-block;
+		padding: 0 18px;
+		color: #3a3a3a;
+		font-weight: 600;
+		font-size: 15px;
+		height: 64px;
+		line-height: 70px;
+		text-align: center;
+		vertical-align: middle;
+		border-bottom: none;
+		-o-transition: color,0.25s,ease-in-out,background,0.25s,ease-in-out;
+		-moz-transition: color,0.25s,ease-in-out,background,0.25s,ease-in-out;
+		-webkit-transition: color,0.25s,ease-in-out,background,0.25s,ease-in-out;
+		transition: color,0.25s,ease-in-out,background,0.25s,ease-in-out;
+		
+		&:hover{
+			background-color: $gray-lighter;
+			//color: $cru-accent-light;
+			color: $cru-gold;
+		}
+	}
+}
+
+.nav{
+	margin-bottom: 0;
+	
+}
+
+.icon-hamburger.toggle-topbar{
+	display: inline-block;
+}
+
+.icon-hamburger.toggle-topbar, .navigation-wrapper .icon-search{
+	padding: 0 12px;
+}
+
+.tagline{
+	display: none;
+	padding-left: 28px;
+	padding-right: 28px;
+	background-color: #ffffff;
+	border-bottom: 1px solid rgba(6,8,8,0.1);
+		
+	p{
+		font-size: 14px;
+		margin-bottom: 0;
+		min-height: 44px;
+	}
+}
+
+
+.shell{
+	border-width: 2px;
+	border-style: solid;
+	border-color: rgba(0,0,0,0.05);
+	
+	@include vendor(border-radius, 3px)
+	
+	
+}
+
+.hero{
+	background: transparent;
+	width: 100%;
+	
+	.content{
+		position: relative;
+		height: 200px;
+		width: 100%;
+		background-image: url('http://www.hdwallpapers.in/walls/new_york_skyline-wide.jpg');
+		background-position: -160px;
+		
+		
+		&:after{
+			background-image: url('http://www.hdwallpapers.in/walls/new_york_skyline-wide.jpg');
+			background-position: -160px;
+			opacity: 0.2;
+		    top: 0;
+		    left: 0;
+		    bottom: 0;
+		    right: 0;
+		    position: absolute;
+		    z-index: -1;
+		}
+	}
+
+	.sub-nav{
+		background: #ffffff;
+	}	
+	
+	.info h1, .crumbs{
+		//background: rgba(0,0,0, 0.8);
+		display: inline;
+		z-index: 10;
+		color: #fff;
+	    padding: 6px;
+		text-shadow: 0px -1px 0px rgba(0,0,0, 0.8);
+		
+	}
+
+	
+	.crumbs a{
+		color: #fff;
+	}
+}
+
+.community{
+	padding-left: 30px;
+	padding-right: 30px;
+	
+	&.sub-nav{
+		border-top-width: 1px;
+		border-top-style: solid;
+		border-top-color: rgba(0,0,0,0.05);
+		
+		 a{
+			height: 60px;
+			line-height: 60px;
+			
+			&:hover{
+				background-color: $gray-lighter;
+			}
+			
+		}
+	}
+}
+
+.community + .sub-nav{
+	padding-left: 12px;
+	padding-right: 12px;
+}
+
+.crumbs{
+	> li{
+		padding-right: 4px;
+		/*&:not(:last-child):after{
+			content: ' / ';
+			display: inline-block;
+		}*/
+		
+		&:after{
+			content: ' / ';
+			display: inline-block;
+		}
+		
+		> a{
+			padding-right: 4px;
+			border-bottom-color: transparent;
+		}
+	}
+}
+
+.info .desk--three-quarters{
+	border-width: 1px;
+	border-style: solid;
+	border-color: transparent;	
+}
+
+.info{
+	p, h1{
+		margin-bottom: 0;
+	}
+}
+
+.sub-nav{
+	a{
+		padding: 0 18px;
+		text-transform: capitalize;	
+	}
+}
+
+.crumbs a, .sub-nav a{
+	text-transform: capitalize;	
+} 
+
+
+.card{
+	background-color: #fff;
+}
+
+.feature-header p{
+	height: 56px;
+	line-height: 56px;
+	margin-bottom: 0;
+}
+
+figure{
+	margin-bottom: 0;
+}
+
+.map{
+	position: relative;
+	padding: 30px;
+	//background-image: url('../images/mappy.png');
+	//background-opacity: .4;
+	
+	&:after{
+		content: "";
+	    background: url('../images/mappy.png');
+	    opacity: 0.2;
+	    top: 0;
+	    left: 0;
+	    bottom: 0;
+	    right: 0;
+	    position: absolute;
+	    z-index: -1;
+	}
+}
+
+label[for="map-search"], input[name="map-search"], .map input[type="submit"]{
+	display: block;
+	@extend .block-center;
+}
+
+input[name="map-search"]{
+	padding: 4px;
+	font-size: 16px;
+}
+
+.hero img{
+	background-image: url('http://www.hdwallpapers.in/walls/new_york_skyline-wide.jpg');
+	height: 150px;
+	width: 100%;
+	background-position: -160px;
+}
+
+.site-footer{
+	margin-top: 2em; 
+	height: 100px;
+}
+
+/**
+ * 538px
+ */
+@media screen and (min-width: 33.625em){
+	.tagline{
+		padding-left: 55px;
+		padding-right: 55px;
+		
+		p{
+			line-height: 44px;
+		}
+		
+	}
+}
+
+
+
+/**
+ * 751px
+ */
+@media screen and (min-width: 46.9375em){
+	.site-nav{
+		display: inline-block;
+		width: 84%;
+		
+	}
+	
+	.right-nav{
+		width: 16%;
+
+	}
+	
+}
+
+
+
+/**
+ * 868px
+ */
+@media screen and (min-width: 54.25em){
+	#navigation{
+		width: 90%;
+	}
+
+	#logo{
+		width: 10%;
+	}
+}
+
+
+
+/**
+ * 918px
+ */
+@media screen and (min-width: 57.375em){
+	.site-nav{
+		width: 65%;
+		display: inline-block;
+		vertical-align: middle;
+	}
+	
+	.right-nav{
+		width: 35%;
+	}
+		.user-actions{
+			display: inline-block;
+		}
+		
+	.icon-hamburger.toggle-topbar{
+		display: none;
+	}
+}
+
+@media screen and (min-width: 1024px){
+	.info .desk--three-quarters{
+		border-left-color: $cru-gold;
+	}
+	
+	.info{
+		h1{
+			font-size: 3.25em;
+		}
+	}
+}
+
