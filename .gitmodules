@@ -1,0 +1,3 @@
+[submodule "cru-brand"]
+	path = cru-brand
+	url = https://github.com/thejamesdempsey/cru-brand.git
