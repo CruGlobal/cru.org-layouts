@@ -398,11 +398,24 @@ label[for="map-search"], input[name="map-search"], .map input[type="submit"]{
 }
 
 label[for="map-search"]:hover{
-		input[name="map-search"]{
-			border-width: 2px;
-			border-color: $cru-gray;
-		}
+	input[name="map-search"]{
+		border-color: $cru-gray;
+	}
 }
+
+
+form .actions{
+	@extend %transition-default;
+	padding: 0;
+	border: none;
+}
+
+form .actions:hover{
+	input[name="map-search"]{
+		border-color: $cru-gray;
+	}
+}
+
 input[name="map-search"]{
 	
 	@extend %transition-default;
@@ -419,22 +432,10 @@ input[name="map-search"]{
 	@include vendor(border-radius, 2px);
 	
 	&:active, &:focus{
-		border-color: $gray-darker;
+		border-color: $cru-accent-light;
 	}
 }
 
-form .actions{
-	@extend %transition-default;
-	
-	padding: 0;
-	border: none;
-	
-	&:hover{
-		input[name="map-search"]{
-			border-color: $gray-darker;
-		}
-	}
-}
 
 input[name="map-search"]{
 	padding: 4px;
