@@ -1,11 +1,11 @@
 [submodule "brand"]
 	path = brand
 	url = https://github.com/thejamesdempsey/cru-brand.git
-	
-[submodule "proto-inuit.css"]
-	path = prototype-alpha/dev/styles/inuit.css
-	url = https://github.com/thejamesdempsey/inuit.css.git
+
 	
 [submodule "inuit.css"]
 	path = dev/styles/inuit.css
+	url = https://github.com/thejamesdempsey/inuit.css.git
+[submodule "prototypes/alpha/dev/styles/proto-inuit.css"]
+	path = prototypes/alpha/dev/styles/proto-inuit.css
 	url = https://github.com/thejamesdempsey/inuit.css.git
