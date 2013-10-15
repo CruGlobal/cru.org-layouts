@@ -1,0 +1,121 @@
+/*------------------------------------*\
+    $BUTTONS
+\*------------------------------------*/
+
+%button{
+	@extend .btn;
+	@extend %transition-default;
+	/**
+	 * The no select class applies 'user-select: none' and its vendor prefixes.
+	 * This prevents the user from dragging the link attatched to the button,
+	 * making this especially useful with submit variants
+	 */
+	@extend %no-select;
+	
+	margin-right: em(18) /* 18px */;
+		
+	background-color: $gray-light;
+	color: $gray-dark;
+	font-size: 90%;
+	font-weight: 600;
+	text-align: center;
+	text-transform: capitalize;
+	letter-spacing: 0.0625em /* 1px letter spacing */;
+	line-height: 2.6;
+	
+	border: 2px solid lighten($cru-gray, 45%);
+	
+	overflow: hidden;
+	
+	&:hover{
+		background-color: lighten($cru-gray, 45%);	
+	}	
+}
+
+
+
+
+/*------------------------------------*\
+    $BUTTON SIZES
+\*------------------------------------*/
+
+
+.button--default, .button{
+	@extend %button;
+	
+	padding-left: em(18) /* 18px */; 
+	padding-right: em(18) /* 18px */;
+	
+	font-size: 95%;
+	
+	&.disabled{
+		@extend %button-disabled;
+	}
+}
+
+.button--small{
+	@extend %button;
+	
+	padding-left: em(14) /* 14px */;
+	padding-right: em(14) /* 14px */;
+	
+	font-size: 85%;
+	line-height: 2;
+	
+	&.disabled{
+		@extend %button-disabled;
+	}
+	
+}
+
+.button--large{
+	@extend %button;
+	@extend .btn--large;
+	
+	line-height: 3.3;
+	
+	&.disabled{
+		@extend %button-disabled;
+	}
+	
+}
+
+
+/*------------------------------------*\
+    $BUTTON COLORS
+\*------------------------------------*/
+.gold{
+	background-color: $cru-gold;
+}
+.button--primary{
+	@extend .gold;
+	@extend %text-white;
+		
+	border-color: darken($cru-primary, 10%);
+		
+	&:hover{
+		background-color: darken($cru-primary, 10%);	
+	}
+}
+
+.button--secondary, .button--dark{
+	@extend .gray;
+	@extend %text-white;
+	
+	border-color: $gray-darker;
+		
+	&:hover{
+		background-color: $gray-darker;	
+	}
+}
+
+.button--accent{
+	@extend .blue-bright;
+	@extend %text-white;
+		
+	border-color: $cru-accent-dark;
+		
+	&:hover{
+		background-color: $cru-accent-dark;	
+	}
+}
