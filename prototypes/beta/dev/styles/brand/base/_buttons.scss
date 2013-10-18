@@ -84,9 +84,7 @@
 /*------------------------------------*\
     $BUTTON COLORS
 \*------------------------------------*/
-.gold{
-	background-color: $cru-gold;
-}
+
 .button--primary{
 	@extend .gold;
 	@extend %text-white;

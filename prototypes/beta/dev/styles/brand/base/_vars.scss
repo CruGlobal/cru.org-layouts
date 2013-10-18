@@ -46,7 +46,13 @@ $gray-light: lighten($cru-gray, 50%);
 $gray-lighter: lighten($cru-gray, 58%);
 
 
-
+/*------------------------------------*\
+    $VERTICAL GRID
+\*------------------------------------*/
+/** 
+ * Vertical basline multiplier used in setting margins and paddings
+ */
+$base-vertical-grid: 6;
 
 
 /*------------------------------------*\
