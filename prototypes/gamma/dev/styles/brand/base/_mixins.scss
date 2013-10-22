@@ -1,0 +1,88 @@
+/*------------------------------------*\
+    $MIXINS AND FUNTIONS
+\*------------------------------------*/
+/**
+ * Pixel to em convertion handling
+ */
+
+$browser-default: 16; /* Default */
+
+@function em($pixels, $default: $browser-default){
+  @return #{$pixels/$default}em;
+}
+
+/**
+ * Allows numbers to be set with css instead of html by default; this allows
+ * us to change the font family(and other things) of the number only
+ */
+@mixin auto-numbers($numbered-element, $sep, $counter: item, $nested-parent: false ){
+    $sel: ();
+    @if $nested-parent {
+        $sel: append($sel, unquote($nested-parent));
+
+        #{$nested-parent}{
+            list-style: none;
+            margin-left: 0;
+        }
+    }
+    $sel: append($sel, unquote('&'), comma);
+
+    #{$sel}{
+        counter-reset: #{$counter};
+        > #{$numbered-element}{
+            &:before{
+                counter-increment: #{$counter};
+                content: if($nested-parent, counters(#{$counter}, "#{$sep} ") "#{$sep} ", counter(#{$counter}) "#{$sep} ") ;
+            }
+        }
+    }
+}
+
+/**
+ *  Calculates any number of margins and paddings in one swoop
+ * 
+ * Running this is as easy 
+ * @include vertical-calc(1, 12) {}
+ *
+ */
+@mixin vertical-calc($from: 1, $to: 12, $grid: $base-vertical-grid){
+    @if $from >= 1 and $to <= 12{
+        @for $i from $from through $to{
+            .mt#{$i}{
+				margin-top: ($grid * $i) + px !important;
+				margin-top: ($grid * $i)/16 + rem !important;
+				@content
+            }
+
+			.mb#{$i}{
+				margin-bottom: ($grid * $i) + px !important;
+				margin-bottom: ($grid * $i)/16 + rem !important;
+				@content
+            }
+
+			.mtb#{$i}{
+				@extend .mt#{$i};
+				@extend .mb#{$i};
+			}
+			
+			.pt#{$i}{
+				padding-top: ($grid * $i) + px !important;
+				padding-top: ($grid * $i)/16 + rem !important;
+				@content
+            }
+
+			.pb#{$i}{
+				padding-bottom: ($grid * $i) + px !important;
+				padding-bottom: ($grid * $i)/16 + rem !important;
+				@content	
+            }
+
+			.ptb#{$i}{
+				@extend .pt#{$i};
+				@extend .pb#{$i};
+			}
+			
+        }
+    }
+}
+

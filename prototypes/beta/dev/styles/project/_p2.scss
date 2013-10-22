@@ -1,3 +1,5 @@
+
+
 body{
 	background-color: $gray-lighter;
 	padding-top: 40px;
@@ -174,9 +176,7 @@ ol, ul, li, hgroup, h1, h2, h3, h4, p{
 	position: relative;
 	
 	.sub-nav{
-		position: absolute;
-		width: 100%;
-		background: rgba(0,0,0, 0.7);
+		background-color: $gray-darker;
 		
 		li{
 			display: inline-block;
@@ -198,6 +198,25 @@ ol, ul, li, hgroup, h1, h2, h3, h4, p{
 
 }
 
+
+.blog-post{
+	border-top: 1px solid rgba(6,8,8,0.1);
+	
+	h1 a{
+		border-bottom: none;
+		
+		&:hover{
+			color: $cru-accent-light;
+			border-bottom: none;
+		}
+		
+	}
+	
+	&:first-child{
+		border-top: none;
+	}
+}
+
 @media all and (min-width: 400px){
 	.site-logo--mobile{
 		width: 18%;
@@ -207,6 +226,33 @@ ol, ul, li, hgroup, h1, h2, h3, h4, p{
 		width: 82%;
 	}
 	
+}
+
+@media all and (min-width: 480px){
+	.feature-image figure {
+		
+		.sub-nav{
+			position: absolute;
+			width: 100%;
+			background: rgba(0, 0, 0, 0.7);
+			
+			li{
+				width: auto;
+			}
+		}
+	}
+	
+}
+
+@media all and (min-width: 33.625em){
+	.post-group{
+		width: 75%;
+		margin: 0 auto;
+		
+		h1{
+			font-weight: bold;
+		}
+	}
 }
 
 

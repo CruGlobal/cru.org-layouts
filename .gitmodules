@@ -10,3 +10,7 @@
 [submodule "prototypes/beta/dev/styles/inuit.css"]
 	path = prototypes/beta/dev/styles/inuit.css
 	url = https://github.com/thejamesdempsey/inuit.css.git
+	
+[submodule "prototypes/gamma/dev/styles/inuit.css"]
+	path = prototypes/beta/gamma/styles/inuit.css
+	url = https://github.com/thejamesdempsey/inuit.css.git

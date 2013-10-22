@@ -1,0 +1,666 @@
+
+
+h1,h2,h3,h4,h5,h6, hgroup, li, ol, ul, a, p{
+	margin-bottom: 0;
+}
+
+html{
+	width: 100%;
+	height: 100%;	
+}
+
+body{
+    padding-top: 67px;
+    background-color: $gray-lighter;
+	width: 100%;
+	height: 100%;	
+}
+
+body:before{
+	content: " ";
+	display: block;
+	width: 100%;
+	height: 61px;
+	top: 0;
+	left: 0;
+	position: absolute;
+}
+
+.wrapper{
+	max-width: 1100px;
+	margin-right: auto;
+	margin-left: auto;
+	padding-right: 24px;
+	padding-left: 24px;
+}
+
+
+.site-header{
+	position: fixed;
+	top: 0;
+	
+	z-index: 505;
+	overflow: hidden;
+	
+	width: 100%;
+	height: 100%;
+	max-height: 67px;
+	
+	border-top-width: 3px;
+	border-top-style: solid;
+	border-top-color: $cru-gold;
+}
+
+.navigation-wrapper{
+	position: absolute;
+	top: -1px;
+	
+	z-index: 500;
+	overflow: hidden;
+	
+	width: 100%;
+	height: 64px;
+	max-height: 100%;
+	
+	background: white;
+	
+	@include vendor(box-shadow, 0 1px 1px rgba(6,8,8,0.1) );
+	
+	li{
+		display: inline-block;
+	}
+	a{
+		display: inline-block;
+		padding: 0 18px;
+		color: #3a3a3a;
+		font-weight: 600;
+		font-size: 15px;
+		height: 64px;
+		line-height: 70px;
+		text-align: center;
+		vertical-align: middle;
+		border-bottom: none;
+		-o-transition: color,0.25s,ease-in-out,background,0.25s,ease-in-out;
+		-moz-transition: color,0.25s,ease-in-out,background,0.25s,ease-in-out;
+		-webkit-transition: color,0.25s,ease-in-out,background,0.25s,ease-in-out;
+		transition: color,0.25s,ease-in-out,background,0.25s,ease-in-out;
+		
+		&:hover{
+			background-color: $gray-lighter;
+			color: $cru-gold;
+		}
+	}
+}
+
+	.site-logo{
+		@extend %inline-block-element;
+		
+		width: 10%;
+		height: 64px;
+		line-height: 64px;
+		vertical-align: middle;		
+	
+		text-align: center;
+		
+		a{
+			height: 55px;
+			display: inline-block;
+			overflow: hidden;
+			vertical-align: middle;
+			
+			&:hover{
+				background: transparent;
+			}
+		}
+		
+		h1{
+			width: 70px;
+			height: 55px;
+			background: url("../images/cru-logo.png");
+			background-image: url("../images/cru-logo.svg");
+			//background-image: url(data:image/svg+xml;charset=US-ASCII,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22utf-8%22%3F%3E%0D%0A%3C%21--%20Generator%3A%20Adobe%20Illustrator%2017.0.0%2C%20SVG%20Export%20Plug-In%20.%20SVG%20Version%3A%206.00%20Build%200%29%20%20--%3E%0D%0A%3C%21DOCTYPE%20svg%20PUBLIC%20%22-//W3C//DTD%20SVG%201.1//EN%22%20%22http%3A//www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd%22%3E%0D%0A%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20xmlns%3Axlink%3D%22http%3A//www.w3.org/1999/xlink%22%20x%3D%220px%22%20y%3D%220px%22%0D%0A%09%20width%3D%2297.409px%22%20height%3D%2268.586px%22%20viewBox%3D%220%200%2097.409%2068.586%22%20enable-background%3D%22new%200%200%2097.409%2068.586%22%20xml%3Aspace%3D%22preserve%22%3E%0D%0A%3Cg%20id%3D%22Master_Logos%22%3E%0D%0A%09%3Cg%3E%0D%0A%09%09%3Cpath%20fill%3D%22%23626062%22%20d%3D%22M27.224%2C52.608c-1.892%2C2.15-3.905%2C3.151-6.333%2C3.151c-4.325%2C0-7.844-3.648-7.844-8.132v-0.072%0D%0A%09%09%09c0-4.52%2C3.429-8.06%2C7.808-8.06c2.394%2C0%2C4.387%2C0.937%2C6.273%2C2.949l0.4%2C0.427l1.401-1.307l-0.406-0.429%0D%0A%09%09%09c-1.648-1.748-3.845-3.535-7.632-3.535c-2.665%2C0-5.149%2C1.052-6.994%2C2.963c-1.817%2C1.881-2.818%2C4.377-2.818%2C7.028v0.073%0D%0A%09%09%09c0%2C5.509%2C4.385%2C9.991%2C9.775%2C9.991c3.078%2C0%2C5.628-1.234%2C7.796-3.773l0.364-0.427l-1.392-1.301L27.224%2C52.608z%22/%3E%0D%0A%09%09%3Cpath%20fill%3D%22%23626062%22%20d%3D%22M34.489%2C41.473v-3.44h-1.932v19.189h1.932v-9.92c0-3.26%2C2.531-7.807%2C6.655-7.807h0.767v-1.89L41.254%2C37.6%0D%0A%09%09%09C38.182%2C37.6%2C35.867%2C39.307%2C34.489%2C41.473%22/%3E%0D%0A%09%09%3Cpath%20fill%3D%22%23626062%22%20d%3D%22M58.599%2C38.033v10.712c0%2C4.458-2.294%2C7.015-6.295%2C7.015c-4%2C0-6.295-2.557-6.295-7.015V38.033h-1.931%0D%0A%09%09%09v10.784c0%2C5.452%2C3.124%2C8.838%2C8.154%2C8.838h0.144c5.029%2C0%2C8.153-3.386%2C8.153-8.838V38.033H58.599z%22/%3E%0D%0A%09%09%3Cpolygon%20fill%3D%22%233DB1C8%22%20points%3D%2273.39%2C10.931%2073.39%2C23.803%2086.328%2C23.803%2086.328%2C25.677%2071.517%2C25.677%2071.517%2C10.909%20%09%09%22/%3E%0D%0A%09%09%3Cpolygon%20fill%3D%22%23007398%22%20points%3D%2267.328%2C23.803%2067.328%2C14.745%2069.203%2C14.751%2069.203%2C25.677%2058.122%2C25.677%2058.122%2C23.803%20%09%09%22/%3E%0D%0A%09%09%3Cpolygon%20fill%3D%22%23DD7D1B%22%20points%3D%2282.507%2C27.983%2082.507%2C29.858%2073.39%2C29.858%2073.39%2C48.018%2071.517%2C48.018%2071.517%2C27.983%20%09%09%22/%3E%0D%0A%09%09%3Cpolygon%20fill%3D%22%23F9B625%22%20points%3D%2269.203%2C27.983%2069.203%2C37.62%2069.203%2C42.867%2067.328%2C42.867%2067.328%2C29.857%2054.358%2C29.857%20%0D%0A%09%09%0954.358%2C27.983%20%09%09%22/%3E%0D%0A%09%09%3Cpath%20fill%3D%22%23626062%22%20d%3D%22M76.046%2C47.238c0-0.454%2C0.366-0.822%2C0.82-0.822s0.82%2C0.368%2C0.82%2C0.822c0%2C0.451-0.366%2C0.82-0.82%2C0.82%0D%0A%09%09%09S76.046%2C47.69%2C76.046%2C47.238z%20M76.866%2C46.484c-0.414%2C0-0.747%2C0.343-0.747%2C0.755s0.333%2C0.75%2C0.747%2C0.75%0D%0A%09%09%09c0.414%2C0%2C0.747-0.338%2C0.747-0.75S77.28%2C46.484%2C76.866%2C46.484z%20M76.695%2C47.672H76.57v-0.887c0%2C0%2C0.283%2C0%2C0.286%2C0%0D%0A%09%09%09c0.223%2C0%2C0.338%2C0.103%2C0.338%2C0.273c0%2C0.13-0.07%2C0.216-0.175%2C0.256l0.223%2C0.358h-0.145l-0.203-0.328l-0.198%2C0.01V47.672z%0D%0A%09%09%09%20M76.851%2C47.241c0.145-0.003%2C0.218-0.068%2C0.218-0.176c0-0.115-0.073-0.168-0.226-0.168c-0.002%2C0-0.15%2C0-0.15%2C0v0.348%0D%0A%09%09%09L76.851%2C47.241z%22/%3E%0D%0A%09%3C/g%3E%0D%0A%3C/g%3E%0D%0A%3Cg%20id%3D%22Layer_4%22%3E%0D%0A%3C/g%3E%0D%0A%3Cg%20id%3D%22Labels%22%3E%0D%0A%3C/g%3E%0D%0A%3C/svg%3E%0D%0A);
+			
+			background-repeat: no-repeat;
+			background-position: top center;
+			background-size: contain;
+		}	
+    }
+
+
+	.navigation{
+		@extend %inline-block-element;
+		
+		width: 90%;
+		height: 64px;
+		vertical-align: middle;
+	}
+
+.site-nav{
+	width: 90%;
+	display: none;
+	vertical-align: middle;
+}
+
+.right-nav{
+	float: right;
+	text-align: right;
+	width: 100%;
+	display: inline-block;
+	vertical-align: middle;
+}
+	.user-actions{
+		display: none;
+		font-size: 60%;
+	}
+	
+
+
+
+.nav{
+	margin-bottom: 0;
+	
+}
+
+.icon-hamburger.toggle-topbar{
+	display: inline-block;
+}
+
+.icon-hamburger.toggle-topbar, .navigation-wrapper .icon-search{
+	padding: 0 12px;
+}
+
+.tagline{
+	display: none;
+	padding-left: 28px;
+	padding-right: 28px;
+	background-color: #ffffff;
+	border-bottom: 1px solid rgba(6,8,8,0.1);
+		
+	p{
+		font-size: 14px;
+		margin-bottom: 0;
+		min-height: 44px;
+	}
+}
+
+
+
+.page-header{
+	@extend %center-text;
+	
+}
+
+	.page-subnav{
+		@extend %inline-block-element;
+		
+		
+		z-index: 1;
+	
+		position: relative;
+		bottom: -18px;
+		
+		background: #ffffff;
+		
+			> li{
+
+				
+				> a{
+					padding-top: 6px;
+					padding-bottom: 6px;
+					padding-left: 20px;
+					padding-right: 20px;
+					
+					text-transform: capitalize;
+				}
+			}
+	}
+	
+	figure{
+		position: relative;
+		
+		figcaption{
+			position: absolute;
+			bottom: 8%;
+			
+			display: inline-block;
+			padding-left: 18px;
+			padding-right: 18px;
+			background: rgba(225, 225, 225, 0.6);
+		}
+	}
+    
+
+    .crumbs{
+	    font-size: 80%;
+    }
+
+	.page-subtitle{
+		font-size: 3em;
+	}
+
+
+
+
+.shell{
+	border-width: 2px;
+	border-style: solid;
+	border-color: rgba(0,0,0,0.05);
+	
+	@include vendor(border-radius, 3px)
+	
+	
+}
+
+
+
+
+.hero{
+	background: transparent;
+	width: 100%;
+	
+	.content{
+		position: relative;
+		height: 200px;
+		width: 100%;
+		background-image: url('http://www.hdwallpapers.in/walls/new_york_skyline-wide.jpg');
+		background-position-x: -87px;
+		background-position-y: 41%;
+		
+		
+		&:after{
+			background-image: url('http://www.hdwallpapers.in/walls/new_york_skyline-wide.jpg');
+			background-position: -160px;
+			opacity: 0.2;
+		    top: 0;
+		    left: 0;
+		    bottom: 0;
+		    right: 0;
+		    position: absolute;
+		    z-index: -1;
+		}
+	}
+
+	.sub-nav{
+		background: #ffffff;
+	}	
+	
+	.info h1, .crumbs{
+		display: inline;
+		z-index: 10;
+		color: #fff;
+	    padding: 6px;
+		text-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+		
+	}
+
+	
+	.crumbs a{
+		color: #fff;
+	}
+}
+
+.community{
+	padding-left: 30px;
+	padding-right: 30px;
+	
+	&.sub-nav{
+		border-top-width: 1px;
+		border-top-style: solid;
+		border-top-color: rgba(0,0,0,0.05);
+		
+		 a{
+			height: 60px;
+			line-height: 60px;
+			
+			&:hover{
+				background-color: $gray-lighter;
+			}
+			
+		}
+	}
+}
+
+.community + .sub-nav{
+	padding-left: 12px;
+	padding-right: 12px;
+}
+
+.crumbs{
+	> li{
+		padding-right: 4px;
+		/*&:not(:last-child):after{
+			content: ' / ';
+			display: inline-block;
+		}*/
+		
+		&:after{
+			content: ' / ';
+			display: inline-block;
+		}
+		
+		> a{
+			padding-right: 4px;
+			border-bottom-color: transparent;
+		}
+	}
+}
+
+.info .desk--three-quarters{
+	border-width: 1px;
+	border-style: solid;
+	border-color: transparent;	
+}
+
+.info{
+	p, h1{
+		margin-bottom: 0;
+	}
+}
+
+.sub-nav{
+	a{
+		padding: 0 18px;
+		text-transform: capitalize;	
+	}
+}
+
+.crumbs a, .sub-nav a{
+	text-transform: capitalize;	
+} 
+
+
+.card{
+	background-color: #fff;
+}
+
+.feature-header p{
+	height: 56px;
+	line-height: 56px;
+	margin-bottom: 0;
+}
+
+
+
+figure{
+	margin-bottom: 0;
+}
+
+.map{
+	position: relative;
+	padding: 30px;
+	
+	&:after{
+		content: "";
+	    background: url('../images/mappy.png');
+	    opacity: 0.2;
+	    top: 0;
+	    left: 0;
+	    bottom: 0;
+	    right: 0;
+	    position: absolute;
+	    z-index: -1;
+	}
+}
+
+label[for="map-search"], input[name="map-search"], .map input[type="submit"]{
+	display: block;
+	@extend .block-center;
+}
+
+label[for="map-search"]:hover{
+	input[name="map-search"]{
+		border-color: $cru-gray;
+	}
+}
+
+
+form .actions{
+	@extend %transition-default;
+	padding: 0;
+	border: none;
+}
+
+form .actions:hover{
+	input[name="map-search"]{
+		border-color: $cru-gray;
+	}
+}
+
+input[name="map-search"]{
+	
+	@extend %transition-default;
+	
+	border-width: 2px;
+	outline: none;
+
+	border-width: 2px;
+	border-style: solid;
+	border-color: lighten($cru-gray, 25%);
+	
+	background: $gray-lighter;
+	@include vendor(box-shadow, inset 0 1px 2px rgba(0,0,0,.05));
+	@include vendor(border-radius, 2px);
+	
+	&:active, &:focus{
+		border-color: $cru-accent-light;
+	}
+}
+
+
+input[name="map-search"]{
+	padding: 4px;
+	font-size: 16px;
+}
+
+.hero img{
+	background-image: url('http://www.hdwallpapers.in/walls/new_york_skyline-wide.jpg');
+	height: 150px;
+	width: 100%;
+	background-position: -160px;
+}
+
+.site-footer{
+	height: 100px;
+}
+
+
+.page-subnav.wrapper{
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.blog-post{
+	border-top: 1px solid rgba(6,8,8,0.1);
+	
+	h1 a{
+		border-bottom: none;
+		
+		&:hover{
+			color: $cru-accent-light;
+			border-bottom: none;
+		}
+		
+	}
+	
+	&:first-child{
+		border-top: none;
+	}
+}
+
+@media all and (max-width: 520px){
+	.page-subnav > li{
+		width: 50%;
+		display: inline-block;
+		
+		border-bottom: 1px solid rgba(6,8,8,0.1);
+		
+		&:nth-child(odd){
+			border-right: 1px solid rgba(6,8,8,0.1);
+		}
+		
+		&:nth-last-of-type(-n+2){
+			border-bottom: none;
+		}
+	}	
+}
+@media all and (min-width: 521px){
+	.page-subnav > li{
+		border-right: 1px solid rgba(6,8,8,0.1);
+	
+		&:last-child{
+			border-right: none;
+		}
+	}
+}
+
+/**
+ * 538px
+ */
+@media all and (min-width: 33.625em){
+	.tagline{
+		padding-left: 55px;
+		padding-right: 55px;
+		
+		p{
+			line-height: 44px;
+		}
+	}
+	
+	.post-group{
+		width: 75%;
+		margin: 0 auto;
+		
+		h1{
+			font-weight: bold;
+		}
+	}
+}
+
+@media all and (max-width: 616px){
+	
+	.page-subnav{
+		width: 100%;
+	}
+	.page-subnav.wrapper{
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+@media all and (min-width: 617px){
+	.page-subnav.wrapper{
+		width: auto;
+	}
+}
+
+
+
+
+/**
+ * 751px
+ */
+@media all and (min-width: 46.9375em){
+	.site-nav{
+		display: inline-block;
+		width: 84%;
+		
+	}
+	
+	.right-nav{
+		width: 16%;
+
+	}
+	
+}
+
+
+
+/**
+ * 868px
+ */
+@media all and (min-width: 54.25em){
+	#navigation{
+		width: 90%;
+	}
+
+	#logo{
+		width: 10%;
+	}
+}
+
+
+
+/**
+ * 918px
+ */
+@media all and (min-width: 980px){
+	.site-nav{
+		width: 65%;
+		display: inline-block;
+		vertical-align: middle;
+	}
+	
+	.right-nav{
+		width: 35%;
+	}
+		.user-actions{
+			display: inline-block;
+		}
+		
+		
+		.icon-hamburger.toggle-topbar{
+			display: none;
+		}
+}
+
+@media all and (min-width: 1024px){
+	.info .desk--three-quarters{
+		border-left-color: $cru-gold;
+	}
+	
+	.info{
+		h1{
+			font-size: 3.25em;
+		}
+	}
+}
+
+
+@media all and (max-width: 1099px){
+	figure.wrapper, .page-subnav.wrapper{
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+@media all and (min-width: 710px) and (max-width: 980px){
+	.right-nav a, .site-nav a{
+		height: 32px;
+		line-height: 32px;
+	}
+	
+	
+	
+	.user-actions{
+		display: inline-block;
+	}
+	
+	.right-nav a{
+		font-size: 13px;
+	}
+	
+	.site-nav{
+		width: 100%;
+		display: inline-block;
+		vertical-align: middle;
+		text-align: right;
+	}
+	
+	.right-nav{
+		width: 100%;
+	}
+	
+	.icon-hamburger.toggle-topbar{
+		display: none;
+	}
+}
