@@ -1,0 +1,51 @@
+/*------------------------------------*\
+    $FONTS
+\*------------------------------------*/
+/**
+ * Freight Sans Font Family
+ */
+@font-face { 
+	font-family: "Freight Sans Pro"; 
+	src: url('../fonts/FreigSanProLig.otf'); 
+	font-weight: 100;
+} 
+@font-face { 
+	font-family: "Freight Sans Pro"; 
+	src: url('../fonts/FreigSanProBook.otf');
+	font-weight: 300; 
+}
+
+@font-face { 
+	font-family: "Freight Sans Pro"; 
+	src: url('../fonts/FreigSanProBookIt.otf'); 
+	font-weight: 300;
+	font-style: italic;
+}
+
+@font-face { 
+	font-family: "Freight Sans Pro"; 
+	src: url('../fonts/FreigSanProMed.otf'); 
+	font-weight: 400;
+}
+@font-face { 
+	font-family: "Freight Sans Pro"; 
+	src: url('../fonts/FreigSanProSem.otf'); 
+	font-weight: 500;
+}
+
+@font-face { 
+	font-family: "Freight Sans Pro"; 
+	src: url('../fonts/FreigSanProBook.otf'); 
+	font-weight: 500;
+}
+
+
+
+
+/**
+ * Leitura Roman Font Family
+ */
+@font-face {
+	font-family: 'Leitura Roman';
+	src: url('../fonts/Leitura-Roman.otf'); 
+}
