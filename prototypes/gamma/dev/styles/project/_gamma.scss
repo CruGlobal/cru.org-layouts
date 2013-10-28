@@ -1,5 +1,3 @@
-
-
 h1,h2,h3,h4,h5,h6, hgroup, li, ol, ul, a, p{
 	margin-bottom: 0;
 }
@@ -225,8 +223,14 @@ body:before{
 			display: inline-block;
 			padding-left: 18px;
 			padding-right: 18px;
-			background: rgba(225, 225, 225, 0.6);
+			background: rgba(225, 225, 225, 0.8);
+						
+			h3{
+				font-weight: bold;
+			}
 		}
+		
+		
 	}
     
 
@@ -438,6 +442,7 @@ input[name="map-search"]{
 	border-color: lighten($cru-gray, 25%);
 	
 	background: $gray-lighter;
+	
 	@include vendor(box-shadow, inset 0 1px 2px rgba(0,0,0,.05));
 	@include vendor(border-radius, 2px);
 	
@@ -484,6 +489,21 @@ input[name="map-search"]{
 	
 	&:first-child{
 		border-top: none;
+	}
+}
+
+.card-header, .card-footer{
+	padding-left: 30px;
+	padding-right: 30px;
+}
+	.card-header p{
+		height: 56px;
+		line-height: 56px;
+	}
+	
+.card-main{
+	img{
+		min-height: 300px;
 	}
 }
 
